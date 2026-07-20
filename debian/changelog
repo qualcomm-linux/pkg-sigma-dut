@@ -1,5 +1,5 @@
-sigma-dut (1.0.1-1) unstable
+sigma-dut (1.0.1-1) unstable; urgency=medium
 
   * Populate.
 
- -- Github Service Bot <githubservice@qti.qualcomm.com>  Tue, 07 Oct 2025 14:21:59 -0700
+ -- jinfen <jinfen@qti.qualcomm.com>  Mon, 20 Jul 2026 14:21:59 -0700
