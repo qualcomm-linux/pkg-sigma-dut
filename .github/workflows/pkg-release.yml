@@ -2,35 +2,30 @@ name: Release
 description: |
   Release a new package version.
   This workflow is manually triggered via workflow_dispatch.
+  Set repository variable IS_TEST_PKG=true to run in test mode.
 
 on:
   workflow_dispatch:
     inputs:
-
       debian-branch:
         description: The debian branch to release. For example branch "qcom/debian/trixie"
         type: string
         required: true
 
-      test-run:
-        description: |
-          Debian: if true, stop after build/test.
-          Ubuntu: still runs the full release flow.
-        type: boolean
-        default: true
-
 permissions:
   contents: write
   packages: read
+  checks: write
 
 jobs:
   Release:
-    uses: qualcomm-linux/qcom-build-utils/.github/workflows/pkg-release-reusable-workflow.yml@main
+    uses: qualcomm-linux/qli-ci/.github/workflows/pkg-release-reusable-workflow.yml@main
     with:
-      qcom-build-utils-ref: main
+      qli-ci-ref: main
       debian-branch: ${{ github.event.inputs.debian-branch }}
-      test-run: ${{ github.event.inputs.test-run == 'true' && true || false }}
+      test-run: ${{ vars.IS_TEST_PKG == 'true' }}
       debusine-parent-workspace: ${{ vars.DEBUSINE_PARENT_WORKSPACE }}
+      debusine-target-workspace: ${{ vars.DEBUSINE_TARGET_WORKSPACE || (vars.IS_TEST_PKG == 'true' && 'qli-staging' || 'prod') }}
     secrets:
       PAT: ${{ secrets.DEB_PKG_BOT_CI_TOKEN }}
       DEBUSINE_USER: ${{ secrets.DEBUSINE_USER }}
