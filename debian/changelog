@@ -1,8 +1,10 @@
-sigma-dut (1.0.1-2~) UNRELEASED; urgency=medium
+sigma-dut (1.0.1-2) UNRELEASED; urgency=medium
 
-  * WIP — update changelog before next release
+  * Update sigma-dut source to upstream commit
+    a7859766c2bc60bcbc5d6271617141e6853fea8a.
+  * Update Debian packaging for the new upstream source.
 
- -- Jouni Malinen <jouni.malinen@oss.qualcomm.com>  Tue, 04 Aug 2026 09:20:56 +0000
+ -- Jing Feng <jinfen@qti.qualcomm.com>  Mon, 07 Sep 2026 00:00:00 +0000
 
 sigma-dut (1.0.1-1) resolute; urgency=medium
 
