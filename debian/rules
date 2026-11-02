@@ -3,5 +3,8 @@
 %:
 	dh $@
 
-override_dh_auto_install:
-	install -D -m 755 sigma_dut debian/sigma-dut/usr/bin/sigma_dut
+override_dh_auto_build:
+	dh_auto_build -- NL80211_SUPPORT=yes
+
+override_dh_usrlocal:
+	install -D sigma_dut $(CURDIR)/debian/sigma-dut/usr/local/bin/sigma_dut
