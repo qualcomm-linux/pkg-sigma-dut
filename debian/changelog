@@ -1,4 +1,4 @@
-sigma-dut (1.0.2-1~) UNRELEASED; urgency=medium
+sigma-dut (1.0.2-1) UNRELEASED; urgency=medium
   [ Jing Feng ]
   * Update sigma-dut source to upstream commit
     a7859766c2bc60bcbc5d6271617141e6853fea8a.
