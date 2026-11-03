@@ -1,10 +1,10 @@
-sigma-dut (1.0.2-1) UNRELEASED; urgency=medium
+sigma-dut (1.0.2-1) resolute; urgency=medium
   [ Jing Feng ]
   * Update sigma-dut source to upstream commit
     a7859766c2bc60bcbc5d6271617141e6853fea8a.
   * Update Debian packaging for the new upstream source.
 
- -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Thu, 29 Oct 2026 07:00:40 +0000
+ -- GitHub Service Bot <githubservice@qti.qualcomm.com>  Tue, 03 Nov 2026 06:58:48 +0000
 
 sigma-dut (1.0.1-1) resolute; urgency=medium
 
