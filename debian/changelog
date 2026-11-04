@@ -1,3 +1,9 @@
+sigma-dut (1.0.2-3~) UNRELEASED; urgency=medium
+
+  * WIP — update changelog before next release
+
+ -- Jouni Malinen <jouni.malinen@oss.qualcomm.com>  Wed, 04 Nov 2026 02:47:31 +0000
+
 sigma-dut (1.0.2-2) resolute; urgency=medium
 
   [ Jouni Malinen ]
